@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Rules({ _title, _text, _next }) {
+function IntroSlide({ _title, _text, _next }) {
   const classes = useStyles();
   return (
     <Box className={classes.center}>
@@ -77,7 +77,7 @@ function Rules({ _title, _text, _next }) {
           </Typography>
         </Box>
         <Box className={classes.introBox}>
-          <Typography className={classes.text} variant="h4">
+          <Typography className={classes.text} variant="h5">
             {_text}
           </Typography>
         </Box>
@@ -91,4 +91,4 @@ function Rules({ _title, _text, _next }) {
   );
 }
 
-export default Rules;
+export default IntroSlide;

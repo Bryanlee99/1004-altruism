@@ -68,7 +68,7 @@ function Landing() {
         </Typography>
       </Box>
       <Box className={classes.startBox}>
-        <Button className={classes.start} variant="contained" href={"/rules"}>
+        <Button className={classes.start} variant="contained" href={"/intro"}>
           Get Started
         </Button>
       </Box>

@@ -4,16 +4,20 @@ import { Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "@mui/styles";
 import theme from "theme";
 
+// Helpers
+import IntroSlideLoader from "text/introSlideLoader.js";
+
 // Components
 import Landing from "components/Landing/Landing.js";
-import Rules from "components/Landing/Rules.js";
+import Intro from "components/Landing/Intro.js";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/rules" element={<Rules />} />
+        <Route path="/intro" element={<Intro />} />
+        {IntroSlideLoader()}
       </Routes>
     </ThemeProvider>
   );
