@@ -4,10 +4,14 @@ import { Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "@mui/styles";
 import theme from "theme";
 
+// Images
+import Berry from "assets/berry.jpg";
+
 // Helpers
 import IntroSlideLoader from "text/loaders/introSlideLoader.js";
 import ArticleSeriesLoader from "text/loaders/articleSeriesLoader.js";
 import DecisionLoader from "text/loaders/decisionPageLoader.js";
+import EndGameLoader from "text/loaders/endGameLoader.js";
 
 // Components
 import Landing from "components/Landing/Landing.js";
@@ -22,6 +26,7 @@ function App() {
         {IntroSlideLoader()}
         {ArticleSeriesLoader()}
         {DecisionLoader()}
+        {EndGameLoader()}
       </Routes>
     </ThemeProvider>
   );

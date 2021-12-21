@@ -10,7 +10,10 @@ import {
   fourthSectionStart,
   fifthSectionStart,
   sixthSectionStart,
-  gameEnd,
+  gameEndMulti,
+  gameEndMultiKin,
+  gameEndKin,
+  gameEndNatural,
 } from "text/sections.js";
 
 const decisionPoints = {
@@ -49,7 +52,7 @@ const decisionPoints = {
       "Convert to multi-level selection",
       "Convert to Nowak's natural selection based theory",
     ],
-    optionURLs: [sixthSectionStart, gameEnd, gameEnd],
+    optionURLs: [sixthSectionStart, gameEndMulti, gameEndNatural],
     url: decision5Url,
   },
   Decision6: {
@@ -59,7 +62,7 @@ const decisionPoints = {
       "Multi-level selection and kin selection are equivalent",
       "Change endorsement to kin selection, distinct from multi-level selection",
     ],
-    optionURLs: [gameEnd, gameEnd, gameEnd],
+    optionURLs: [gameEndMulti, gameEndMultiKin, gameEndKin],
     url: decision6Url,
   },
 };

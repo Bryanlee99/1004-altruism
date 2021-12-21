@@ -1,5 +1,4 @@
 import React from "react";
-import parse from "html-react-parser";
 
 // Components
 import { Box, Typography, Button } from "@mui/material";
@@ -39,13 +38,18 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "1000 !important",
     paddingRight: theme.spacing(2),
   },
-  introBox: {
+  theGroupText: {
+    fontFamily: "museo-sans !important",
+    color: theme.palette.primary.light,
+    fontWeight: "1000 !important",
+  },
+  descBox: {
     flexGrow: 1,
     width: "100%",
     boxSizing: "border-box", // includes border in box sizing
     display: "flex",
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "space-evenly",
     flexDirection: "column",
     paddingLeft: theme.spacing(6),
     paddingTop: theme.spacing(6),
@@ -56,35 +60,74 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "500 !important",
     textAlign: "center",
   },
-  nextBox: {
+  fullFlexRowEven: {
+    width: "100%",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-evenly",
+  },
+  imgBox: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  },
+  endGameBox: {
     paddingTop: theme.spacing(1),
     paddingBottom: theme.spacing(5),
   },
-  next: {
+  endGame: {
     fontFamily: "museo-sans !important",
     fontSize: "1.5rem !important",
     backgroundColor: theme.palette.secondary.main + "!important",
   },
 }));
 
-function IntroSlide({ _title, _text, _next }) {
+function GameEnd({ _group, _text, _imgs, _imgCaptions, _futureWorkURL }) {
   const classes = useStyles();
+
+  const renderImgs = () => {
+    const imgsArr = [];
+    for (var idx = 0; idx < _imgs.length; idx++) {
+      var img = _imgs[idx];
+      var caption = _imgCaptions[idx];
+      console.log(caption);
+      imgsArr.push(
+        <Box key={idx} className={classes.imgBox}>
+          <img src={img} alt={caption} />
+          <Typography variant="h6">{caption}</Typography>
+        </Box>
+      );
+    }
+    return <Box className={classes.fullFlexRowEven}>{imgsArr}</Box>;
+  };
+
   return (
     <Box className={classes.center}>
       <Box className={classes.root}>
         <Box className={classes.titleBox}>
           <Typography className={classes.titleText} variant="h2">
-            {_title}
+            You've selected:
+          </Typography>
+          <Typography className={classes.theGroupText} variant="h2">
+            {_group}
           </Typography>
         </Box>
-        <Box className={classes.introBox}>
+        <Box className={classes.descBox}>
+          {renderImgs()}
           <Typography className={classes.text} variant="h5">
-            {parse(_text)}
+            {_text}
           </Typography>
         </Box>
-        <Box className={classes.nextBox}>
-          <Button className={classes.next} variant="contained" href={_next}>
-            Next
+        <Box className={`${classes.endGameBox} + ${classes.fullFlexRowEven}`}>
+          <Button className={classes.endGame} variant="contained" href={"/"}>
+            End Game
+          </Button>
+          <Button
+            className={classes.endGame}
+            variant="contained"
+            href={_futureWorkURL}
+          >
+            See Future Work
           </Button>
         </Box>
       </Box>
@@ -92,4 +135,4 @@ function IntroSlide({ _title, _text, _next }) {
   );
 }
 
-export default IntroSlide;
+export default GameEnd;

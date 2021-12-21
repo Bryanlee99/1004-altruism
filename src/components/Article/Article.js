@@ -1,4 +1,5 @@
 import React from "react";
+import parse from "html-react-parser";
 
 // Components
 import { Box, Typography, Button } from "@mui/material";
@@ -87,7 +88,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Article({ _title, _text, _next, _references }) {
+function Article({ _title, _category, _text, _next, _references }) {
   const classes = useStyles();
   return (
     <Box className={classes.center}>
@@ -98,13 +99,13 @@ function Article({ _title, _text, _next, _references }) {
               {_title}
             </Typography>
             <Typography className={classes.subtitleText} variant="h5">
-              Background
+              {_category}
             </Typography>
           </Box>
         </Box>
         <Box className={classes.textBox}>
           <Typography className={classes.text} variant="h5">
-            {_text}
+            {parse(_text)}
           </Typography>
         </Box>
         <Box className={`${classes.nextBox} ${classes.flexRow}`}>
@@ -112,7 +113,7 @@ function Article({ _title, _text, _next, _references }) {
             {_references}
           </Typography>
           <Button className={classes.next} variant="contained" href={_next}>
-            Next
+            {_next === "/" ? "Return Home" : "Next"}
           </Button>
         </Box>
       </Box>
