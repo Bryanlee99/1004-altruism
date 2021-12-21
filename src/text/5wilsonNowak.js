@@ -1,8 +1,10 @@
+import { fifthSectionStart } from "text/sections.js";
+
 const wilsonNowak = {
   Wilson1: {
     title: "E.O Wilson: Limitations of Kin Selection? (1/2)",
     text: `Kin Selection Limits 1`,
-    url: "/wilson1",
+    url: fifthSectionStart,
     references: ["source"],
   },
   Wilson2: {

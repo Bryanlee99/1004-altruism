@@ -1,8 +1,10 @@
+import { firstSectionStart } from "text/sections.js";
+
 const darwinSeries = {
   Darwin1: {
     title: "Darwin's Altruism Dilemma (1/2)",
     text: `darwin1`,
-    url: "/darwin1",
+    url: firstSectionStart,
     references: ["source"],
   },
   Darwin2: {

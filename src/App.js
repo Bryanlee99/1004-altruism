@@ -7,6 +7,7 @@ import theme from "theme";
 // Helpers
 import IntroSlideLoader from "text/introSlideLoader.js";
 import ArticleSeriesLoader from "text/articleSeriesLoader.js";
+import DecisionLoader from "text/decisionPageLoader.js";
 
 // Components
 import Landing from "components/Landing/Landing.js";
@@ -20,6 +21,7 @@ function App() {
         <Route path="/intro" element={<Intro />} />
         {IntroSlideLoader()}
         {ArticleSeriesLoader()}
+        {DecisionLoader()}
       </Routes>
     </ThemeProvider>
   );

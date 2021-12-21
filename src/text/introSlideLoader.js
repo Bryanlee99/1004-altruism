@@ -3,7 +3,7 @@ import { Route } from "react-router-dom";
 
 // Files
 import content from "text/introContent.js";
-import { firstSection } from "text/sections.js";
+import { firstSectionStart } from "text/sections.js";
 
 // Components
 import IntroSlide from "components/Landing/IntroSlide.js";
@@ -11,7 +11,7 @@ import IntroSlide from "components/Landing/IntroSlide.js";
 function IntroSlideLoader() {
   const slideRoutes = [];
   var contentArr = [];
-  var _nextURL = firstSection;
+  var _nextURL = firstSectionStart;
   for (const key in content) {
     contentArr.push(content[key]);
   }

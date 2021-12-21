@@ -1,8 +1,10 @@
+import { secondSectionStart } from "text/sections.js";
+
 const groupLimits = {
   Revert: {
     title: "Limitations of Group Selection",
     text: `There are some limitations with group selection. Go back to Hamilton`,
-    url: "/group-limits",
+    url: "/grouplimits",
     references: ["source"],
   },
 };

@@ -8,6 +8,14 @@ import hamilton from "text/3hamilton.js";
 import multiSeries from "text/4multi.js";
 import wilsonNowak from "text/5wilsonNowak.js";
 import kinMultiEqual from "text/6kinMultiEqual.js";
+import {
+  decision1Url,
+  decision2Url,
+  decision3Url,
+  decision4Url,
+  decision5Url,
+  decision6Url,
+} from "text/sections.js";
 
 // Components
 import Article from "components/Article/Article.js";
@@ -22,8 +30,16 @@ function ArticleSeriesLoader() {
     wilsonNowak,
     kinMultiEqual,
   ];
-  var _nextURL = "/doesntexist";
+  const decisionURLs = [
+    decision1Url,
+    decision2Url,
+    decision3Url,
+    decision4Url,
+    decision5Url,
+    decision6Url,
+  ];
   for (const idx in articleList) {
+    var _nextURL = decisionURLs[idx];
     const content = articleList[idx];
     var contentArr = [];
     for (const key in content) {

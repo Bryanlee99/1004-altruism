@@ -1,8 +1,10 @@
+import { fourthSectionStart } from "text/sections.js";
+
 const multiSeries = {
   Multi1: {
     title: "Multi-Level Selection: Group Selection Reborn?",
     text: `Multi Level Intro`,
-    url: "/multilevelintro",
+    url: fourthSectionStart,
     references: ["source"],
   },
   MultiLevel1: {

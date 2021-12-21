@@ -1,8 +1,10 @@
+import { thirdSectionStart } from "text/sections.js";
+
 const hamiltonSeries = {
   Hamilton1: {
     title: "Hamilton: Another Explanation for Altruism? (1/3)",
     text: `Hamilton1`,
-    url: "/hamilton1",
+    url: thirdSectionStart,
     references: ["source"],
   },
   Hamilton2: {
