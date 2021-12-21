@@ -6,12 +6,14 @@ import theme from "theme";
 
 // Components
 import Landing from "components/Landing/Landing.js";
+import Rules from "components/Landing/Rules.js";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <Routes>
         <Route path="/" element={<Landing />} />
+        <Route path="/rules" element={<Rules />} />
       </Routes>
     </ThemeProvider>
   );

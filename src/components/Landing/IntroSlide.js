@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
   },
-  welcomeBox: {
+  titleBox: {
     paddingTop: theme.spacing(1),
     paddingLeft: theme.spacing(2),
     display: "flex",
@@ -32,16 +32,11 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     boxSizing: "border-box", // includes border in box sizing
   },
-  welcomeText: {
+  titleText: {
     fontFamily: "museo-sans !important",
     color: theme.palette.primary.main,
     fontWeight: "1000 !important",
     paddingRight: theme.spacing(2),
-  },
-  theGameText: {
-    fontFamily: "museo-sans !important",
-    color: theme.palette.primary.light,
-    fontWeight: "1000 !important",
   },
   introBox: {
     flexGrow: 1,
@@ -54,18 +49,11 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: theme.spacing(6),
     paddingTop: theme.spacing(6),
   },
-  introText: {
+  text: {
     fontFamily: "museo-sans !important",
     color: theme.palette.primary.main,
     fontWeight: "500 !important",
     textAlign: "center",
-  },
-  introSubtext: {
-    fontFamily: "museo-sans !important",
-    color: theme.palette.primary.main,
-    fontWeight: "500 !important",
-    textAlign: "center",
-    paddingTop: theme.spacing(2),
   },
   nextBox: {
     paddingTop: theme.spacing(1),
@@ -78,39 +66,23 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Rules() {
+function Rules({ _title, _text, _next }) {
   const classes = useStyles();
   return (
     <Box className={classes.center}>
       <Box className={classes.root}>
-        <Box className={classes.welcomeBox}>
-          <Typography className={classes.welcomeText} variant="h2">
-            Welcome to
-          </Typography>
-          <Typography className={classes.theGameText} variant="h2">
-            the Game
+        <Box className={classes.titleBox}>
+          <Typography className={classes.titleText} variant="h2">
+            {_title}
           </Typography>
         </Box>
         <Box className={classes.introBox}>
-          <Typography className={classes.introText} variant="h4">
-            Welcome to the Choose Your Own Adventure Game: Altruism Version!
-          </Typography>
-          <Typography className={classes.introText} variant="h6">
-            This is a website for Gened 1004’s final project for Fall 2021 by
-            Bryan Lee and Nathan Le.
-          </Typography>
-          <Typography className={classes.introSubtext} variant="h6">
-            You'll go on an adventure through some of the history of research on
-            the evolutionary origins of altruism. Before we discuss the rules of
-            the game, let’s discuss “what is altruism” and “why altruism”.
+          <Typography className={classes.text} variant="h4">
+            {_text}
           </Typography>
         </Box>
         <Box className={classes.nextBox}>
-          <Button
-            className={classes.next}
-            variant="contained"
-            href={"/riddle1"}
-          >
+          <Button className={classes.next} variant="contained" href={_next}>
             Next
           </Button>
         </Box>
