@@ -109,7 +109,7 @@ function Rules() {
           <Button
             className={classes.next}
             variant="contained"
-            href={"/whyaltruism"}
+            href={"/whatisaltruism"}
           >
             Next
           </Button>
