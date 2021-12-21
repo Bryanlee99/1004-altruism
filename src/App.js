@@ -6,6 +6,7 @@ import theme from "theme";
 
 // Helpers
 import IntroSlideLoader from "text/introSlideLoader.js";
+import ArticleSeriesLoader from "text/articleSeriesLoader.js";
 
 // Components
 import Landing from "components/Landing/Landing.js";
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/intro" element={<Intro />} />
         {IntroSlideLoader()}
+        {ArticleSeriesLoader()}
       </Routes>
     </ThemeProvider>
   );
