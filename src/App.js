@@ -5,9 +5,9 @@ import { ThemeProvider } from "@mui/styles";
 import theme from "theme";
 
 // Helpers
-import IntroSlideLoader from "text/introSlideLoader.js";
-import ArticleSeriesLoader from "text/articleSeriesLoader.js";
-import DecisionLoader from "text/decisionPageLoader.js";
+import IntroSlideLoader from "text/loaders/introSlideLoader.js";
+import ArticleSeriesLoader from "text/loaders/articleSeriesLoader.js";
+import DecisionLoader from "text/loaders/decisionPageLoader.js";
 
 // Components
 import Landing from "components/Landing/Landing.js";
