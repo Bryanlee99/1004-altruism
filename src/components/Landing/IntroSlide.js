@@ -1,5 +1,6 @@
 import React from "react";
 import parse from "html-react-parser";
+import { useNavigate } from "react-router-dom";
 
 // Components
 import { Box, Typography, Button } from "@mui/material";
@@ -60,6 +61,12 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(1),
     paddingBottom: theme.spacing(5),
   },
+  back: {
+    fontFamily: "museo-sans !important",
+    fontSize: "1.5rem !important",
+    marginRight: theme.spacing(4) + "!important",
+    backgroundColor: theme.palette.primary.light + "!important",
+  },
   next: {
     fontFamily: "museo-sans !important",
     fontSize: "1.5rem !important",
@@ -69,6 +76,16 @@ const useStyles = makeStyles((theme) => ({
 
 function IntroSlide({ _title, _text, _next }) {
   const classes = useStyles();
+  const navigate = useNavigate();
+
+  const goForward = () => {
+    navigate(_next);
+  };
+
+  const goBack = () => {
+    navigate(-1);
+  };
+
   return (
     <Box className={classes.center}>
       <Box className={classes.root}>
@@ -83,7 +100,14 @@ function IntroSlide({ _title, _text, _next }) {
           </Typography>
         </Box>
         <Box className={classes.nextBox}>
-          <Button className={classes.next} variant="contained" href={_next}>
+          <Button className={classes.back} variant="contained" onClick={goBack}>
+            Back
+          </Button>
+          <Button
+            className={classes.next}
+            variant="contained"
+            onClick={goForward}
+          >
             Next
           </Button>
         </Box>
