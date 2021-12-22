@@ -71,6 +71,12 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "center",
   },
+  img: {
+    maxHeight: "300px",
+  },
+  imgCaption: {
+    fontFamily: "museo-sans !important",
+  },
   endGameBox: {
     paddingTop: theme.spacing(1),
     paddingBottom: theme.spacing(5),
@@ -93,8 +99,10 @@ function GameEnd({ _group, _text, _imgs, _imgCaptions, _appendixURL }) {
       console.log(caption);
       imgsArr.push(
         <Box key={idx} className={classes.imgBox}>
-          <img src={img} alt={caption} />
-          <Typography variant="h6">{caption}</Typography>
+          <img className={classes.img} src={img} alt={caption} />
+          <Typography className={classes.imgCaption} variant="h6">
+            {caption}
+          </Typography>
         </Box>
       );
     }

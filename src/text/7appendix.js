@@ -10,6 +10,7 @@ const appendix = {
     url: appendixStart,
     references: [
       "Roughgarden, Joan. 'The social selection alternative to sexual selection.' Philosophical Transactions of the Royal Society B: Biological Sciences 367.1600 (2012): 2294-2303.",
+      "Simon HA. A mechanism for social selection and successful altruism. Science. 1990 Dec 21;250(4988):1665-8. doi: 10.1126/science.2270480. PMID: 2270480.",
     ],
     category: APPENDIX,
   },
