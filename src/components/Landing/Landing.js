@@ -64,7 +64,7 @@ function Landing() {
       </Box>
       <Box className={classes.titleBox}>
         <Typography className={classes.subtitleText} variant="h5">
-          Journey through altruism theories from Darwin to the Present.
+          Journey through altruism theories from Darwin to the present.
         </Typography>
       </Box>
       <Box className={classes.startBox}>

@@ -1,5 +1,6 @@
 import React from "react";
 import parse from "html-react-parser";
+import img from "assets/multilevel.png";
 
 // Components
 import { Box, Typography, Button } from "@mui/material";
@@ -76,6 +77,7 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "500 !important",
     textAlign: "center",
   },
+  img: { padding: theme.spacing(2), maxHeight: "400px" },
   nextBox: {
     paddingTop: theme.spacing(1),
     paddingLeft: theme.spacing(2),
@@ -88,8 +90,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Article({ _title, _category, _text, _next, _references }) {
+function Article({ _title, _category, _text, _img, _next, _references }) {
   const classes = useStyles();
+  console.log(_references);
   return (
     <Box className={classes.center}>
       <Box className={classes.root}>
@@ -107,11 +110,16 @@ function Article({ _title, _category, _text, _next, _references }) {
           <Typography className={classes.text} variant="h5">
             {parse(_text)}
           </Typography>
+          {_img && <img className={classes.img} src={_img} />}
         </Box>
         <Box className={`${classes.nextBox} ${classes.flexRow}`}>
-          <Typography className={`${classes.flexGrow} ${classes.reference}`}>
-            {_references}
-          </Typography>
+          <Box className={classes.flexGrow}>
+            {_references.map((ref, i) => (
+              <Typography key={i} className={`${classes.reference}`}>
+                {ref}
+              </Typography>
+            ))}
+          </Box>
           <Button className={classes.next} variant="contained" href={_next}>
             {_next === "/" ? "Return Home" : "Next"}
           </Button>

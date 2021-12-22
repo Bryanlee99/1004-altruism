@@ -16,6 +16,11 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "center",
     height: "100vh",
+    maxWidth: "1440px",
+  },
+  center: {
+    display: "flex",
+    justifyContent: "center",
   },
   titleBox: {
     paddingTop: theme.spacing(4),
@@ -112,27 +117,29 @@ function Decision({ _text, _options, _optionURLs }) {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box className={classes.root}>
-        <Box className={classes.titleBox}>
-          <Typography className={classes.title} variant="h2">
-            Decision Point
-          </Typography>
-        </Box>
-        <Box className={classes.titleBox}>
-          <Typography className={classes.text} variant="h4">
-            {_text}
-          </Typography>
-        </Box>
-        <Box className={classes.optionsBox}>{renderButtons()}</Box>
-        <Box className={classes.nextBox}>
-          <Button
-            disabled={clickedAnswer == -1}
-            className={classes.next}
-            variant="contained"
-            onClick={gotoNextPage}
-          >
-            Submit
-          </Button>
+      <Box className={classes.center}>
+        <Box className={classes.root}>
+          <Box className={classes.titleBox}>
+            <Typography className={classes.title} variant="h2">
+              Decision Point
+            </Typography>
+          </Box>
+          <Box className={classes.titleBox}>
+            <Typography className={classes.text} variant="h4">
+              {_text}
+            </Typography>
+          </Box>
+          <Box className={classes.optionsBox}>{renderButtons()}</Box>
+          <Box className={classes.nextBox}>
+            <Button
+              disabled={clickedAnswer == -1}
+              className={classes.next}
+              variant="contained"
+              onClick={gotoNextPage}
+            >
+              Submit
+            </Button>
+          </Box>
         </Box>
       </Box>
     </ThemeProvider>

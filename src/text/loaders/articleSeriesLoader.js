@@ -8,7 +8,7 @@ import hamilton from "text/3hamilton.js";
 import multiSeries from "text/4multi.js";
 import wilsonNowak from "text/5wilsonNowak.js";
 import kinMultiEqual from "text/6kinMultiEqual.js";
-import futureWork from "text/7futureWork.js";
+import appendix from "text/7appendix.js";
 
 import {
   decision1Url,
@@ -32,7 +32,7 @@ function ArticleSeriesLoader() {
     multiSeries,
     wilsonNowak,
     kinMultiEqual,
-    futureWork,
+    appendix,
   ];
   const decisionURLs = [
     decision1Url,
@@ -52,7 +52,7 @@ function ArticleSeriesLoader() {
     }
     contentArr.reverse();
     for (const idx in contentArr) {
-      let { title, category, text, url, references } = contentArr[idx];
+      let { title, category, text, img, url, references } = contentArr[idx];
       articleRoutes.push(
         <Route
           key={idx}
@@ -62,6 +62,7 @@ function ArticleSeriesLoader() {
               _title={title}
               _category={category}
               _text={text}
+              _img={img}
               _next={_nextURL}
               _references={references}
             />

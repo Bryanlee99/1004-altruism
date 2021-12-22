@@ -82,7 +82,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function GameEnd({ _group, _text, _imgs, _imgCaptions, _futureWorkURL }) {
+function GameEnd({ _group, _text, _imgs, _imgCaptions, _appendixURL }) {
   const classes = useStyles();
 
   const renderImgs = () => {
@@ -125,9 +125,9 @@ function GameEnd({ _group, _text, _imgs, _imgCaptions, _futureWorkURL }) {
           <Button
             className={classes.endGame}
             variant="contained"
-            href={_futureWorkURL}
+            href={_appendixURL}
           >
-            See Future Work
+            See Appendix
           </Button>
         </Box>
       </Box>

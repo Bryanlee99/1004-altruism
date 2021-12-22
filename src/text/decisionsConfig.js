@@ -30,8 +30,8 @@ const decisionPoints = {
     url: decision2Url,
   },
   Decision3: {
-    text: `Given the prior evidence suppporting kin selection, but balanced against new proposals for multi-level selection, what option will you choose?.`,
-    options: ["Endorse Multi-level selection", "Endorse Kin Selection"],
+    text: `Given the prior evidence suppporting kin selection, but balanced against new proposals for multi-level selection, what position do you support?.`,
+    options: ["Multi-level selection", "Kin Selection"],
     optionURLs: [fourthSectionStart, fifthSectionStart],
     url: decision3Url,
   },
@@ -46,13 +46,13 @@ const decisionPoints = {
     url: decision4Url,
   },
   Decision5: {
-    text: `Given the concerns E.O. Wilson and Nowak raise about Kin Selection in balance with the counter arguments, which of the following would you choose?`,
+    text: `Given the concerns E.O. Wilson and Nowak raise about Kin Selection in balance with the counter arguments, but also recalling the merits of multilevel selection, which of the following would you choose?`,
     options: [
       "Continue endorsing Kin Selection",
       "Convert to multi-level selection",
       "Convert to Nowak's natural selection based theory",
     ],
-    optionURLs: [sixthSectionStart, gameEndMulti, gameEndNatural],
+    optionURLs: [sixthSectionStart, fourthSectionStart, gameEndNatural],
     url: decision5Url,
   },
   Decision6: {

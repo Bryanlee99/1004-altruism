@@ -1,6 +1,6 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import { futureWorkStart } from "text/sections";
+import { appendixStart } from "text/sections";
 
 // Files
 import endGameConfig from "text/endGameConfig.js";
@@ -22,7 +22,7 @@ function EndGameLoader() {
             _text={text}
             _imgs={imgs}
             _imgCaptions={imgCaptions}
-            _futureWorkURL={futureWorkStart}
+            _appendixURL={appendixStart}
           />
         }
       />

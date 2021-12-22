@@ -4,7 +4,7 @@ export const thirdSectionStart = "/hamilton1";
 export const fourthSectionStart = "/multilevelintro";
 export const fifthSectionStart = "/wilson1";
 export const sixthSectionStart = "/kinmultiequal1";
-export const futureWorkStart = "/futurework1";
+export const appendixStart = "/appendix1";
 
 export const decision1Url = "/decision1";
 export const decision2Url = "/decision2";
@@ -20,4 +20,4 @@ export const gameEndKin = "/end-kin";
 export const gameEndNatural = "/end-naturalselection";
 
 export const BACKGROUND = "Background";
-export const FUTUREWORK = "Future Work";
+export const APPENDIX = "Appendix";
